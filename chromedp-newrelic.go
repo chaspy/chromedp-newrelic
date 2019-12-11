@@ -16,6 +16,13 @@ func main() {
 			fmt.Println("Hello chromedp-newrelic!")
 			return nil
 		},
+		Flags: []cli.Flag{
+			&cli.StringFlag{
+				Name:    "controller",
+				Aliases: []string{"c"},
+				Usage:   "Specify the controller name",
+			},
+		},
 	}
 
 	err := app.Run(os.Args)
