@@ -14,6 +14,7 @@ func main() {
 		Usage: "Get metrics from NewRelic",
 		Action: func(c *cli.Context) error {
 			fmt.Println("Hello chromedp-newrelic!")
+			fmt.Printf("Hello %s controller\n", c.String("controller"))
 			return nil
 		},
 		Flags: []cli.Flag{
